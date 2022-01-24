@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+    <title>Aplikasi Prediksi Biaya Asuransi</title>
+</head>
+
+<body class="
+            flex flex-col
+            justify-between
+            item-center
+            p-8
+            min-h-screen
+            bg-gradient-to-r
+            from-green-400
+            to-blue-500
+            text-gray-800
+            md:flex-row
+        ">
+    <main class="bg-white p-16 rounded-lg">
+        <h1 class="text-3xl font-bold mb-8">
+            Prediksi Penyakit Diabetes
+        </h1>
+
+        <form action='/predict' method="post" class="col s12">
+            <div class="row">
+                <div class="input-field col s4">
+                    <label for="first_name"><b>Jumlah Kehamilan</b></label>
+                    <br>
+                    <input placeholder="isi 0 bila jenis kelamin Laki-Laki" name="1" id="first_name" type="text" class="validate p-4 bg-gray-100 rounded-md">
+                </div>
+                <div class="input-field col s4">
+                    <label for="last_name"><b>Tekanan Gula Darah</b></label>
+                    <br>
+                    <input id="last_name" name="2" placeholder="contoh : 110" type="text" class="validate p-4 bg-gray-100 rounded-md">
+
+                </div>
+
+                <div class="input-field col s4">
+                    <label for="_name"><b>Tekanan Darah</b></label>
+                    <br>
+                    <input id="_name" name="3" placeholder="contoh : 92" type="text" class="validate p-4 bg-gray-100 rounded-md">
+
+                </div>
+                <div class="input-field col s4">
+                    <label for="first_name"><b>Ketebalan Kulit</b></label>
+                    <br>
+                    <input placeholder="contoh : 0" name="4" id="first_name" type="text" class="validate p-4 bg-gray-100 rounded-md">
+                </div>
+                <div class="input-field col s4">
+                    <label for="last_name"><b>Insulin</b></label>
+                    <br>
+                    <input id="last_name" name="5" placeholder="contoh : 0" type="text" class="validate p-4 bg-gray-100 rounded-md">
+                </div>
+                <div class="input-field col s4">
+                    <label><b>BMI</b></label>
+                    <br>
+                    <input name='6' placeholder="contoh : 37.6" class="p-4 bg-gray-100 rounded-md">
+
+                </div>
+                <div class="input-field col s4">
+                    <label for="last_name"><b>DiabetesPedigreeFunction</b></label>
+                    <br>
+                    <input id="last_name" name="7" placeholder="contoh : 0.191" type="text" class="validate p-4 bg-gray-100 rounded-md">
+                </div>
+                <div class="input-field col s4">
+                    <label for="_name"><b>Usia</b></label>
+                    <br>
+                    <input id="_name" name="8" placeholder="Contoh : 30" type="text" class="validate p-4 bg-gray-100 rounded-md">
+                </div>
+
+            </div>
+
+            <div class="row center">
+                <button type="submit" class="
+                        flex
+                        justify-center
+                        align-center
+                        mt-8
+                        p-4
+                        bg-gradient-to-r
+                        from-green-400
+                        to-blue-500
+                        text-white
+                        rounded-md
+                    ">
+                    PREDIKSI SEKARANG
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="feather feather-arrow-right ml-4"
+                    >
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </form>
+    </main>
+    <section class="mt-8 h-full flex-auto rounded-lg md:mt-0 md:ml-8">
+        <div class="bg-white p-16 rounded-lg">
+            <h1 class="text-2xl mb-8">
+                Hasil Prediksi :
+            </h1>
+            <div class="mt-8">
+                <p>{{ pred }}</p>
+            </div>
+        </div>
+        <div class="flex justify-around bg-white p-8 rounded-lg mt-8">
+            <ul>
+                <li>
+                    <p>Anggota Kelompok : </p>
+                </li>
+                <li>
+                    <small>Alian Hakim</small>
+                </li>
+                <li>
+                    <small>Ruswandhi Adhi Pratama</small>
+                </li>
+                <li>
+                    <small>Widi Fazriani</small>
+                </li>
+            </ul>
+            <img class="h-24 md:h-28" src="https://cdn4.iconfinder.com/data/icons/medical-14/512/13-512.png" alt="logo-dts" />
+
+        </div>
+    </section>
+</body>
+
+</html>
